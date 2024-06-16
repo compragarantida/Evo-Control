@@ -6,28 +6,47 @@
     <title>Evo Control - Promoção Exclusiva</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-           body {
+        body {
             background-color: #880D11;
             color: #fff;
         }
-        .header {
+        .header, .footer {
             background-color: #000;
             color: #fff;
             text-align: center;
             padding: 20px 0;
         }
-        .promo-section {
-            background-color: #ffeb3b;
-            color: #333;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .highlight {
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            text-transform: uppercase;
             text-align: center;
         }
-        .promo-section:hover {
+        .btn-custom:hover {
+            background-color: #e63900;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             transform: scale(1.05);
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .promo-section {
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
         .promo-section h2 {
             color: #880D11;
@@ -40,21 +59,8 @@
             text-decoration: line-through;
             color: #888;
         }
-        .btn-custom {
-            background-color: #ff4500;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            border: none;
-            text-transform: uppercase;
-        }
-        .btn-custom:hover {
-            background-color: #e63900;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            transform: scale(1.05);
+        .promo-section .cta {
+            margin-top: 20px;
         }
         .benefits {
             background-color: #fff;
@@ -72,6 +78,26 @@
         .benefits p {
             color: #333;
         }
+        .guarantee-section {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .guarantee-section h3 {
+            color: #880D11;
+        }
+        .accordion-button {
+            color: #880D11;
+        }
+        .accordion-button:hover {
+            background-color: #ff4500;
+            color: #fff;
+        }
+        .accordion-body {
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -83,16 +109,16 @@
 
 <div class="container mt-3 mb-3">
     <div class="row p-4">
-        <div class="col-md-4 mx-auto my-auto">
-            <img src="3potes.svg" class="img-fluid" alt="Evo Control 3 Potes">
+        <div class="col-sm-6 col-md-4 mx-auto my-auto">
+            <img src="https://evocontroloficial.com.br/wp-content/uploads/2024/04/ergergege.webp" class="img-fluid" alt="Evo Control">
         </div>
-        <div class="col-md-6 mx-auto my-auto">
-            <div class="promo-section">
-                <h2 class="fw-bold">🔥 Promoção Exclusiva!</h2>
-                <p class="fs-4">Adquira <b>3 unidades do Evo Control</b> por apenas </p>
-                <p class="price"><span class="old-price fs-3">R$597,00</span> <br> <span class="fw-bold fs-2">R$199,00</span></p>
-                <button class="btn btn-custom">
-                    <a class="text-white fw-bold" style="text-decoration: none;" href="#compra">QUERO MEU EVO CONTROL AGORA!</a>
+        <div class="col-sm-6 col-md-6 mx-auto my-auto">
+            <div class="promo-section text-center p-4" style="background-color: #ffeb3b; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+                <h2 class="fw-bold" style="color: #880D11;">🔥 Promoção Exclusiva!</h2>
+                <p class="fs-4" style="color: #880D11;">Adquira o Evo Control por apenas <span class="fw-bold">R$127,00</span></p>
+                <p class="price" style="font-size: 1.5em; color: #880D11;"><span class="old-price" style="text-decoration: line-through; color: #888;">R$297,00</span> <span style="font-weight: bold; color: #ff4500;">R$127,00</span></p>
+                <button class="btn btn-custom" style="background-color: #880D11; padding: 15px 30px; font-size: 1.2em; border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; border: none;">
+                    <a class="text-white" style="text-decoration: none;" href="https://ev.braip.com/campanhas/cpa/cam8kj1pj">QUERO MEU EVO CONTROL AGORA!</a>
                 </button>
             </div>
         </div>
@@ -100,10 +126,11 @@
 </div>
 
 
+
 <div class="container">
     <section class="benefits my-5 text-center">
         <h2>Benefícios do <span style="color: #ff4500;">Evo Control</span></h2>
-        <div class="row mt-3">
+        <div class="row">
             <div class="col-md-4">
                 <div class="icon">💊</div>
                 <p class="fw-bold">Auxilia na produção de <span style="color: #ff4500;">INSULINA</span></p>
